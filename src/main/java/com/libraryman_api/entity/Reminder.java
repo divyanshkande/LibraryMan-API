@@ -32,7 +32,9 @@ public class Reminder {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	
+	private Long borrowingId;
+	
 	public Long getBorrowingId() {
 		return borrowingId;
 	}
@@ -40,7 +42,9 @@ public class Reminder {
 	public void setBorrowingId(Long borrowingId) {
 		this.borrowingId = borrowingId;
 	}
-
+	
+	private LocalDate reminderDate;
+	
 	public LocalDate getReminderDate() {
 		return reminderDate;
 	}
@@ -48,7 +52,9 @@ public class Reminder {
 	public void setReminderDate(LocalDate reminderDate) {
 		this.reminderDate = reminderDate;
 	}
-
+	
+	  private boolean sent;
+	  
 	public boolean isSent() {
 		return sent;
 	}
@@ -56,7 +62,10 @@ public class Reminder {
 	public void setSent(boolean sent) {
 		this.sent = sent;
 	}
-
+	
+	@Enumerated(EnumType.STRING)
+    private ReminderType type;
+	
 	public ReminderType getType() {
 		return type;
 	}
@@ -65,10 +74,9 @@ public class Reminder {
 		this.type = type;
 	}
 
-	private Long borrowingId;
-    private LocalDate reminderDate;
-    private boolean sent;
+	
+    
+  
 
-    @Enumerated(EnumType.STRING)
-    private ReminderType type;
+    
 }
