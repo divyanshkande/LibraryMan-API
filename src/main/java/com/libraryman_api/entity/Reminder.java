@@ -24,6 +24,11 @@ public class Reminder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long borrowingId;
+    private LocalDate reminderDate;
+    private boolean sent;
+    @Enumerated(EnumType.STRING)
+    private ReminderType type;
 
     public Long getId() {
 		return id;
@@ -33,7 +38,7 @@ public class Reminder {
 		this.id = id;
 	}
 	
-	private Long borrowingId;
+	
 	
 	public Long getBorrowingId() {
 		return borrowingId;
@@ -43,7 +48,7 @@ public class Reminder {
 		this.borrowingId = borrowingId;
 	}
 	
-	private LocalDate reminderDate;
+	
 	
 	public LocalDate getReminderDate() {
 		return reminderDate;
@@ -53,7 +58,7 @@ public class Reminder {
 		this.reminderDate = reminderDate;
 	}
 	
-	  private boolean sent;
+	  
 	  
 	public boolean isSent() {
 		return sent;
@@ -63,8 +68,7 @@ public class Reminder {
 		this.sent = sent;
 	}
 	
-	@Enumerated(EnumType.STRING)
-    private ReminderType type;
+	
 	
 	public ReminderType getType() {
 		return type;
